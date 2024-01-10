@@ -79,6 +79,7 @@
       width: 100vw;
       padding: 20px;
       font-size: 15px;
+      font-family: 'Times New Roman', Times, serif;
       padding-top: 1px;
   }
   .a{
@@ -323,7 +324,7 @@
             <!-- <a  class="o" href="#" style="color: black;">STORE</a>
             <a  class="o" href="#" style="color: black;">CONTACT</a> -->
             <ul class="nav-item dropdown">
-              <a class="nav-link " data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-bars"></i>
+              <a class="nav-link "   data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-bars"></i>
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{% url 'signup' %}">signup</a></li>
@@ -345,6 +346,7 @@
     <hr>
     <div class=" container-fluid sub-nav">
       <div class=" spans">
+        <a href="{% url 'home' %}" style="text-decoration: none;"><span class="a pmen">HOME</span></a>
           <a href="" style="text-decoration: none;"><span class="a pmen">MEN</span></a>
           <a href="" style="text-decoration: none;"><span class="a pwomen">WOMEN</span></a>
           <a href="" style="text-decoration: none;"><span class="a pspecial">PREMIUM WATCHES</span></a>
@@ -409,7 +411,7 @@
                     <h5 class="card-title txt"  id="brand" name="brand">{{i.brand}}</h5>
                     <h5 class="card-title txt"  id="name" name="name">{{i.name}}</h5>
                     <p  class="txt"  style="font-size: smaller;">MRP</p>
-                    <p class="card-text txt"  id="price" name="price">₹{{i.price}}</p>
+                    <p class="card-text txt"  id="price" name="price">₹ {{i.price}}</p>
                   </div>
               </div>
               </a>

@@ -48,7 +48,7 @@ def user_login (request):
         user=authenticate(request,username=username,password=password1)
         if user is not None:
             login(request,user)
-            return redirect(index)
+            return redirect(request,index)
         else:
             messages.info(request,'user not exists')
             print('user no exist')
